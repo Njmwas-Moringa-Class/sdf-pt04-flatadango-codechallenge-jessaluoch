@@ -30,7 +30,7 @@ li.style.cursor="pointer"
 
 function showMovie(movie){
     $('#title').html(movie.title);
-    $('#runtime').html(`${movie.title} minutes`);
+    $('#runtime').html(`${movie.runtime} minutes`);
     $('#film-info').html(`${movie.description}`);
     $('#showtime').html(`${movie.showtime}`);
     $('#ticket-num').html(`${movie.capacity - movie.tickets_sold}`);
@@ -52,7 +52,7 @@ function buyTicket(){
         tickets--;
         ticketHolder.html(tickets);
     }else{
-        alert("Sold out");
+        return("Sold out");
     }
 
 
